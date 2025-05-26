@@ -22,7 +22,7 @@ public class HotelController {
 
     @GetMapping("")
     public String index(HotelForm form){
-        return "search-hotels";
+        return "hotels/search-hotels";
     }
 
     @PostMapping("/search")
@@ -36,7 +36,8 @@ public class HotelController {
         }
         List<Hotel> hotels = service.searchByLessThanPrice(form.getPrice());
         model.addAttribute("hotels", hotels);
-        return "search-hotels";
+        model.addAttribute("searchedFlag", 1);
+        return "hotels/search-hotels";
     }
 
 
