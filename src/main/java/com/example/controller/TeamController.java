@@ -28,7 +28,7 @@ public class TeamController {
     public String index(Model model){
         List<Team> teams = service.showList();
         model.addAttribute("teams", teams);
-        return "teams-index";
+        return "teams/teams-index";
     }
 
     /**
@@ -42,9 +42,9 @@ public class TeamController {
     public String showDetail(Integer id, Model model){
         Team team = service.showDetail(id);
         if (team == null){
-            return "team-error";
+            return "teams/team-error";
         }
         model.addAttribute("teamInfo", team);
-        return "team-info";
+        return "teams/team-info";
     }
 }
