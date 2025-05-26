@@ -6,11 +6,17 @@ import java.util.Date;
  * 球団ドメイン.
  */
 public class Team {
+    /** 球団id */
     private Integer id;
+    /** 球団リーグ名 */
     private String leagueName;
+    /** 球団名 */
     private String teamName;
+    /** 球団本拠地 */
     private String headQuarters;
+    /** 球団発足年月日 */
     private String inauguration;
+    /** 球団名の変遷 */
     private String history;
 
     public Team() {}
