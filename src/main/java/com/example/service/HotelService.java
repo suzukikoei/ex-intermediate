@@ -9,6 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * ホテル情報を操作するサービス.
+ */
 @Service
 @Transactional
 public class HotelService {

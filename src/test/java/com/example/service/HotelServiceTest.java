@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class HotelServiceTest {
     @Autowired
     private HotelService service;
-
-    @Autowired
-    private HotelRepository repository;
+//
+//    @Autowired
+//    private HotelRepository repository;
 
     @Test
     void searchByLessThanPrice1() {
@@ -32,6 +32,18 @@ class HotelServiceTest {
 
     @Test
     void searchByLessThanPrice3() {
+        List<Hotel> actualHotels = service.searchByLessThanPrice("5000");
+        assertEquals(1, actualHotels.size(), "count: 期待された結果と異なります");
+    }
+
+    @Test
+    void searchByLessThanPrice4() {
+        List<Hotel> actualHotels = service.searchByLessThanPrice("9999");
+        assertEquals(1, actualHotels.size(), "count: 期待された結果と異なります");
+    }
+
+    @Test
+    void searchByLessThanPrice5() {
         List<Hotel> actualHotels = service.searchByLessThanPrice("10000");
         assertEquals(3, actualHotels.size(), "count: 期待された結果と異なります");
     }

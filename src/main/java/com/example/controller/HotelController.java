@@ -14,17 +14,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ * ホテル情報を操作するコントローラ.
+ */
 @Controller
 @RequestMapping("/searchHotels")
 public class HotelController {
     @Autowired
     private HotelService service;
 
+    /**
+     * ホテル検索画面を表示する.
+     *
+     * @param form 価格入力フォーム
+     * @return ホテル検索結果
+     */
     @GetMapping("")
     public String index(HotelForm form){
         return "hotels/search-hotels";
     }
 
+    /**
+     * 価格を入力してホテルを検索する.
+     *
+     * @param form 価格フォーム
+     * @param result バリデーション結果
+     * @param model リクエストスコープ
+     * @return　ホテル検索結果
+     */
     @PostMapping("/search")
     public String search(
             @Validated HotelForm form

@@ -10,6 +10,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * ホテル情報を操作するリポジトリ.
+ */
 @Repository
 public class HotelRepository {
     private static final RowMapper<Hotel> HOTEL_ROW_MAPPER =
