@@ -22,7 +22,7 @@ public class TeamRepository {
         team.setLeagueName(rs.getString("league_name"));
         team.setTeamName(rs.getString("team_name"));
         team.setHeadQuarters(rs.getString("headquarters"));
-        team.setInauguration(rs.getDate("inauguration"));
+        team.setInauguration(rs.getString("inauguration"));
         team.setHistory(rs.getString("history"));
         return team;
             };
