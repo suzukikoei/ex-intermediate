@@ -17,10 +17,21 @@ public class TeamService {
     @Autowired
     private TeamRepository repository;
 
+    /**
+     * 球団一覧を全権検索する.
+     *
+     * @return
+     */
     public List<Team> showList(){
         return repository.findAll();
     }
 
+    /**
+     * 球団をidで一件検索する.
+     *
+     * @param id 球団id
+     * @return 球団情報
+     */
     public Team showDetail(Integer id){
         return repository.findById(id);
     }
