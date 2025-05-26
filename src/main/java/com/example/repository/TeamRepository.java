@@ -42,7 +42,7 @@ public class TeamRepository {
                 ", headquarters" +
                 ", inauguration" +
                 ", history" +
-                "FROM teams ORDER BY inauguration";
+                " FROM teams ORDER BY inauguration;";
         return template.query(sql, TEAM_ROW_MAPPER);
     }
 
@@ -59,9 +59,13 @@ public class TeamRepository {
                 ", headquarters" +
                 ", inauguration" +
                 ", history" +
-                "FROM teams WHERE id = :id";
+                " FROM teams WHERE id = :id";
         SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
-        return template.queryForObject(sql, param, TEAM_ROW_MAPPER);
+        List<Team> teams = template.query(sql, param, TEAM_ROW_MAPPER);
+        if(teams.isEmpty()){
+            return null;
+        }
+        return teams.getFirst();
     }
 
 }

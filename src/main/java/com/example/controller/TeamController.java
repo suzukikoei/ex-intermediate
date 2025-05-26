@@ -22,7 +22,7 @@ public class TeamController {
 
     @GetMapping("")
     public String index(Model model){
-        List<Team> teams = service.getAllTeams();
+        List<Team> teams = service.showList();
         model.addAttribute("teams", teams);
         return "team-index";
     }
@@ -30,7 +30,10 @@ public class TeamController {
     @PostMapping("/showDetail")
     public String showDetail(String id){
         Integer team_id = Integer.parseInt(id);
-        Team team = service.getTeamInfo(team_id);
+        Team team = service.showDetail(team_id);
+        if (team == null){
+            return "team-error";
+        }
         return "teams-info";
     }
 }

@@ -13,6 +13,17 @@ public class Team {
     private String inauguration;
     private String history;
 
+    public Team() {}
+
+    public Team(Integer id, String leagueName, String teamName, String headQuarters, String inauguration, String history) {
+        this.id = id;
+        this.leagueName = leagueName;
+        this.teamName = teamName;
+        this.headQuarters = headQuarters;
+        this.inauguration = inauguration;
+        this.history = history;
+    }
+
     public Integer getId() {
         return id;
     }

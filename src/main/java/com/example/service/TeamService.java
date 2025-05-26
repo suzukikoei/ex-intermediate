@@ -17,11 +17,11 @@ public class TeamService {
     @Autowired
     private TeamRepository repository;
 
-    public List<Team> getAllTeams(){
+    public List<Team> showList(){
         return repository.findAll();
     }
 
-    public Team getTeamInfo(Integer id){
+    public Team showDetail(Integer id){
         return repository.findById(id);
     }
 
