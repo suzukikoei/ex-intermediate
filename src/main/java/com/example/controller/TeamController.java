@@ -18,6 +18,12 @@ public class TeamController {
     @Autowired
     private TeamService service;
 
+    /**
+     * 球団一覧画面を表示する.
+     *
+     * @param model
+     * @return 球団一覧画面
+     */
     @GetMapping("")
     public String index(Model model){
         List<Team> teams = service.showList();
@@ -25,6 +31,13 @@ public class TeamController {
         return "teams-index";
     }
 
+    /**
+     * 球団詳細画面を表示する.
+     *
+     * @param id 球団id
+     * @param model リクエストスコープ
+     * @return 球団詳細画面
+     */
     @GetMapping("/showDetail")
     public String showDetail(Integer id, Model model){
         Team team = service.showDetail(id);
