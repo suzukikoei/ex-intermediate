@@ -45,6 +45,6 @@ class TeamServiceTest {
     @Test
     void testShowDetail2(){
         Team actualTeam = service.showDetail(100);
-        assertEquals(null, actualTeam, "isNull: 期待された結果と異なります");
+        assertNull(actualTeam, "isNull: 期待された結果と異なります");
     }
 }
