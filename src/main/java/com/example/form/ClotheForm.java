@@ -5,23 +5,23 @@ package com.example.form;
  */
 public class ClotheForm {
     /**　性別　*/
-    private Integer gender;
+    private String gender;
     /**　色　*/
-    private Integer color;
+    private String color;
 
-    public Integer getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Integer gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public Integer getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Integer color) {
+    public void setColor(String color) {
         this.color = color;
     }
 }

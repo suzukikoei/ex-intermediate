@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.form-container {
+  display: flex;
+  background-color: rgb(230, 227, 227);
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+table {
+  margin-bottom: 5px;
+}
