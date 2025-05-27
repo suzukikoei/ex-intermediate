@@ -1,7 +1,12 @@
 package com.example.form;
 
+/**
+ * 衣類フォーム.
+ */
 public class ClotheForm {
+    /**　性別　*/
     private Integer gender;
+    /**　色　*/
     private Integer color;
 
     public Integer getGender() {

@@ -1,7 +1,7 @@
 package com.example.domain;
 
 /**
- * 衣類ドメイン
+ * 衣類ドメイン.
  */
 public class Clothe {
     /** id */
