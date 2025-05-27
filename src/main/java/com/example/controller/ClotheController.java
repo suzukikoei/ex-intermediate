@@ -40,6 +40,7 @@ public class ClotheController {
         Integer color = form.getColor();
         List<Clothe> clothes = service.searchByColorAndGender(gender, color);
         model.addAttribute("clothes", clothes);
+        model.addAttribute("hasBeenSearched", true);
         return "clothes/search-clothes";
     }
 

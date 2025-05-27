@@ -27,6 +27,9 @@
       </select>
       <button>検索</button>
     </form>
+    <span th:if="${hasBeenSearched && clothes.size == 0}"
+      >検索結果はありません</span
+    >
     <table th:each="clothe: ${clothes}">
       <tr>
         <td>ジャンル</td>
