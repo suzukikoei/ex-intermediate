@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,4 +49,6 @@ class HotelServiceTest {
         List<Hotel> actualHotels = service.searchByLessThanPrice("10000");
         assertEquals(3, actualHotels.size(), "count: 期待された結果と異なります");
     }
+
+    ArrayList
 }
