@@ -17,19 +17,23 @@ public class ClotheService {
     @Autowired
     private ClotheRepository repository;
 
-    public List<Clothe> searchByColorAndGender(Integer gender, Integer color_id){
+    public List<Clothe> searchByColorAndGender(Integer color_id, Integer gender){
         String color = "";
         switch (color_id){
             case 1:
                 color = "赤";
+                break;
             case 2:
                 color = "青";
+                break;
             case 3:
                 color = "白";
+                break;
             case 4:
                 color = "黄";
+                break;
         }
-        return repository.findByColorAndGender(gender,color);
+        return repository.findByColorAndGender(color, gender);
     }
 
 }

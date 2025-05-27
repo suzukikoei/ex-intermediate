@@ -38,7 +38,7 @@ public class ClotheRepository {
      * @param color　色
      * @return
      */
-    public List<Clothe> findByColorAndGender(Integer gender, String color){
+    public List<Clothe> findByColorAndGender(String color, Integer gender){
         String sql = "SELECT" +
                 "  id" +
                 ", category" +

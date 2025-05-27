@@ -49,6 +49,4 @@ class HotelServiceTest {
         List<Hotel> actualHotels = service.searchByLessThanPrice("10000");
         assertEquals(3, actualHotels.size(), "count: 期待された結果と異なります");
     }
-
-    ArrayList
 }

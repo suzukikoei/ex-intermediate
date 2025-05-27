@@ -38,7 +38,7 @@ public class ClotheController {
     public String search(ClotheForm form, Model model) {
         Integer gender = form.getGender();
         Integer color = form.getColor();
-        List<Clothe> clothes = service.searchByColorAndGender(gender, color);
+        List<Clothe> clothes = service.searchByColorAndGender(color, gender);
         model.addAttribute("clothes", clothes);
         model.addAttribute("hasBeenSearched", true);
         return "clothes/search-clothes";
