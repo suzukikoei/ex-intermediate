@@ -28,6 +28,12 @@ public class ClotheController {
     @Autowired
     private ServletContext application;
 
+    /**
+     * 衣類検索画面を表示する.
+     *
+     * @param model リクエストスコープ
+     * @return 衣類検索画面
+     */
     @GetMapping("")
     public String index(Model model) {
         Map<Integer, String> colorMap = new LinkedHashMap<>();
@@ -41,6 +47,13 @@ public class ClotheController {
         return "clothes/search-clothes";
     }
 
+    /**
+     * 衣類を検索した結果を表示する.
+     *
+     * @param form フォーム
+     * @param model リクエストスコープ
+     * @return 衣類検索結果画面
+     */
     @PostMapping("/search")
     public String search(ClotheForm form, Model model) {
         Integer gender = Integer.parseInt(form.getGender());
@@ -53,6 +66,14 @@ public class ClotheController {
         return "clothes/search-clothes";
     }
 
+    /**
+     * 衣類検索結果画面を表示する.
+     * postしたあとのurlでアドレスバーのurlにアクセスしても <br/>
+     * 画面を表示できるようにするメソッド。
+     *
+     * @param model リクエストスコープ
+     * @return 衣類検索画面
+     */
     @GetMapping("/search")
     public String getSearchPage(Model model){
         return index(model);

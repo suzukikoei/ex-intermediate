@@ -17,6 +17,13 @@ public class ClotheService {
     @Autowired
     private ClotheRepository repository;
 
+    /**
+     * 色と性別で衣類検索をする.
+     *
+     * @param color_id 色を表す数
+     * @param gender 性別
+     * @return 衣類の一覧
+     */
     public List<Clothe> searchByColorAndGender(Integer color_id, Integer gender){
         String color = "";
         switch (color_id){
